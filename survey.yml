@@ -1,0 +1,68 @@
+version: "2020"
+
+questions:
+
+  - label: Post code
+    descr: We'll use this to help work out the results of the survey in your local area. We don't store your full address.
+    field: post_code
+    component: PostCodeField
+
+  - label: Age
+    descr: How old are you?
+    field: age
+    component: InputField
+    props:
+      type: number
+      length: 4
+
+  - label: Ownership
+    descr: Which of the following best describes your situation?
+    field: tenure
+    component: SingleChoiceField
+    options:
+      F: Live with family
+      OM: Own my home (with a mortgage)
+      OC: Own my own home (no mortgage)
+      RP: Renting (private landlord)
+      RS: Renting (social landlord)
+        
+  - label: Cost of housing
+    descr: How much do you (individually) pay for housing (e.g. on rent or mortgage repayments) in the average month?
+    field: cost
+    component: InputField
+    props:
+      type: number
+      length: 5
+
+  - label: Monthly income
+    descr: What is your average monthly personal income? We'll use this to work out what percentage of your wages you spend on housing.
+    field: income
+    component: InputField
+    props:
+      type: number
+      length: 5
+
+  - label: Occupants
+    descr: How many people live in the property aside from you?
+    field: occupants
+    component: InputField
+    props:
+      type: number
+      length: 5
+
+  - label: House or flat?
+    descr: What type of property is it?
+    field: dwelling_type
+    component: SingleChoiceField
+    options:
+      T1: Small terraced house
+      T2: Medium or large terraced house
+      H1: Semi-detached house
+      H2: Detached house
+      H3: Bungalow
+      F1: Converted flat (a flat resulting from the conversion of a house or other non-residential building)
+      C: Cluster accommodation (any room or apartment with shared facilitied (e.g. student flats)
+      LW: Live-in workplace
+      F2: Purpose built flat, low rise (less than 6 stories)
+      F3: Purpose built flat, high rise
+      HMO: Shared house (any house where you have a key to your room, but share some facilities, like a kitchen)
