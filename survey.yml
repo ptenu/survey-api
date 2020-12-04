@@ -66,3 +66,16 @@ questions:
       F2: Purpose built flat, low rise (less than 6 stories)
       F3: Purpose built flat, high rise
       HMO: Shared house (any house where you have a key to your room, but share some facilities, like a kitchen)
+
+  - label: Waiting for repairs
+    descr: Have you had to wait longer than six weeks for your landlord to fix something (like a leak, broken heading, etc)?
+    field: 6_week_repair
+    component: SingleChoiceField
+    options:
+      Y: Yes
+      N: No
+    if_or:
+      - field: tenure
+        value: RP
+      - field: tenure
+        value: RS
