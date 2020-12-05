@@ -41,16 +41,16 @@ questions:
         value: RS
 
   - label: Cost of mortgage
-      descr: How much are the mortgage repayments on your property each month?
-      field: cost
-      component: InputField
-      props:
-        type: number
-        data-width: 5
-      prefix: "£"
-      if_or:
-        - field: tenure
-          value: OM
+    descr: How much are the mortgage repayments on your property each month?
+    field: cost
+    component: InputField
+    props:
+      type: number
+      data-width: 5
+    prefix: "£"
+    if_or:
+      - field: tenure
+        value: OM
 
   - label: Monthly income
     descr: What is your average monthly personal income? We'll use this to work out what percentage of your wages you spend on housing.
@@ -79,25 +79,25 @@ questions:
       HMO: HMO / House-share
 
   - label: Occupants
-      descr: Including yourself, how many people live in your house?
-      field: occupants
-      component: InputField
-      props:
-        type: number
-        data-width: 5
-      if_or:
-        - field: dwelling_type
-          value: T1
-        - field: dwelling_type
-          value: T2
-        - field: dwelling_type
-          value: H1
-        - field: dwelling_type
-          value: H2
-        - field: dwelling_type
-          value: H3
-        - field: dwelling_type
-          value: F1
+    descr: Including yourself, how many people live in your house?
+    field: occupants
+    component: InputField
+    props:
+      type: number
+      data-width: 5
+    if_or:
+      - field: dwelling_type
+        value: T1
+      - field: dwelling_type
+        value: T2
+      - field: dwelling_type
+        value: H1
+      - field: dwelling_type
+        value: H2
+      - field: dwelling_type
+        value: H3
+      - field: dwelling_type
+        value: F1
 
   - label: Waiting for repairs
     descr: Have you had to wait longer than six weeks for your landlord to fix something (like a leak, broken heading, etc)?
