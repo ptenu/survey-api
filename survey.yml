@@ -1,4 +1,4 @@
-version: "2020"
+version: "test"
 
 questions:
 
@@ -13,7 +13,7 @@ questions:
     component: InputField
     props:
       type: number
-      length: 4
+      data-width: 4
 
   - label: Ownership
     descr: Which of the following best describes your situation?
@@ -32,7 +32,8 @@ questions:
     component: InputField
     props:
       type: number
-      length: 5
+      data-width: 5
+    prefix: "£"
 
   - label: Monthly income
     descr: What is your average monthly personal income? We'll use this to work out what percentage of your wages you spend on housing.
@@ -40,7 +41,8 @@ questions:
     component: InputField
     props:
       type: number
-      length: 5
+      data-width: 5
+    prefix: "£"
 
   - label: Occupants
     descr: How many people live in the property aside from you?
@@ -48,9 +50,9 @@ questions:
     component: InputField
     props:
       type: number
-      length: 5
+      data-width: 5
 
-  - label: House or flat?
+  - label: Property type
     descr: What type of property is it?
     field: dwelling_type
     component: SingleChoiceField
@@ -60,20 +62,21 @@ questions:
       H1: Semi-detached house
       H2: Detached house
       H3: Bungalow
-      F1: Converted flat (a flat resulting from the conversion of a house or other non-residential building)
-      C: Cluster accommodation (any room or apartment with shared facilitied (e.g. student flats)
+      F1: Converted flat
+      C: Student flats / section house
       LW: Live-in workplace
-      F2: Purpose built flat, low rise (less than 6 stories)
-      F3: Purpose built flat, high rise
-      HMO: Shared house (any house where you have a key to your room, but share some facilities, like a kitchen)
+      F2: Purpose built flats
+      F3: Purpose built flats, high rise
+      HMO: HMO / House-share
 
   - label: Waiting for repairs
     descr: Have you had to wait longer than six weeks for your landlord to fix something (like a leak, broken heading, etc)?
     field: 6_week_repair
     component: SingleChoiceField
     options:
-      Y: Yes
-      N: No
+      0Y: "Yes"
+      1N: "No"
+      X: I don't know
     if_or:
       - field: tenure
         value: RP

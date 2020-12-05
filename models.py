@@ -55,8 +55,11 @@ class Submission(db.Model):
             for field, value in data.items():
                 if field not in allowed_fields:
                     continue
-                if value is None:
+                if value == "":
                     continue
+
+                if value[0] in digits:
+                    value = value[1:]
 
                 self.fields.append(Response(self, field, value))
 
