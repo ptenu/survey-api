@@ -58,7 +58,7 @@ class Submission(db.Model):
                 if value == "":
                     continue
 
-                if value[0] in digits:
+                if value[0] in digits and value[1] in ('Y', 'N'):
                     value = value[1:]
 
                 self.fields.append(Response(self, field, value))
