@@ -48,25 +48,6 @@ def save_response():
     db.session.add(s)
     db.session.commit()
 
-    # Write line to CSV
-    # dir_path = os.path.dirname(os.path.realpath(__file__))
-    # file_path = os.path.join(dir_path, 'data', f'ptu_{s.set}_survey.csv')
-    #
-    # if not os.path.isfile(file_path):
-    #     file = open(file_path, 'w')
-    #     headers = '"sub_id","sub_set","sub_date"'
-    #     for f in s.fields:
-    #         headers += f',"{f.field}"'
-    #     file.write(headers)
-    #     file.close()
-    #
-    # file = open(file_path, "a")
-    # line = f'\n"{s.id}","{s.set}","{s.date}"'
-    # for f in s.fields:
-    #     line += f',"{f.value}"'
-    # file.write(line)
-    # file.close()
-
     return {
         "id": s.id
     }, 201

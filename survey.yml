@@ -1,4 +1,4 @@
-version: "2020"
+version: "2020A"
 
 questions:
 
@@ -27,7 +27,7 @@ questions:
       RS: Renting (social landlord)
         
   - label: Rent
-    descr: How much do you personaly contribute to the rent?
+    descr: How much is your rent? If you split the rent with other people, just enter your share.
     field: cost
     component: InputField
     props:
@@ -53,7 +53,7 @@ questions:
         value: OM
 
   - label: Monthly income
-    descr: What is your average monthly personal income? We'll use this to work out what percentage of your wages you spend on housing.
+    descr: In an average month, what is your total income? Include any benefit payments that are made directly to you.
     field: income
     component: InputField
     props:
